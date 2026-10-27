@@ -1,12 +1,15 @@
+{% load blog_tags %}
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- {{posts}} {% for post in posts %} {% if post.status == 0 %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- {{posts}} {% for post in posts %} {% if post.status == 0 %}
 
     <p>not published yet</p>
 
@@ -16,12 +19,23 @@
     <small>{{post.published_date}}</small>
     {% endif %} {% endfor %} -->
 
-    <!-- <p>{{name}}</p>
+  <!-- <p>{{name}}</p>
     <p>{{family_name}}</p>
     <p>{{age}}</p> -->
 
-    <!-- <p>{{pid}}</p> -->
+  <!-- <p>{{pid}}</p> -->
 
-    <p>{{post.title}}</p>
-  </body>
+  <!-- <p>{{post.title}}</p> -->
+
+  <h1>Testing page</h1>
+
+  <!-- <p>test: {% posts as totalposts %}</p>
+  {% for post in totalposts %}
+  <p>{{post.content|snippet:50}}</p>
+  {% endfor %} -->
+
+  <p>test: </p>
+  {% popularposts %}
+</body>
+
 </html>

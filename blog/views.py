@@ -13,7 +13,8 @@ def blog_single(request,pid):
     context = {'post':post}
     return render(request, 'blog/blog-single.html',context)
 
-def test(request,pid):
+# def test(request,pid):
+def test(request):
     # posts = Post.objects.all()
     # # posts = Post.objects.filter(status=1)
     # context = {'posts':posts}
@@ -23,7 +24,8 @@ def test(request,pid):
     # context = {'pid':pid}
 
     # post = Post.objects.get(id=pid)
-    post = get_object_or_404(Post,pk=pid)
-    context = {'post':post}
+    # post = get_object_or_404(Post,pk=pid)
+    # context = {'post':post}
+    # return render(request, 'test.html',context)
 
-    return render(request, 'test.html',context)
+    return render(request, 'test.html')
