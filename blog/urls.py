@@ -7,6 +7,14 @@ urlpatterns = [
     path('',blog_view,name='index'),
     # path('single',blog_single,name='single'),
     path('<int:pid>',blog_single,name='single'),
+
+    # path('category/<str:cat_name>',blog_category,name='category'),
+    path('category/<str:cat_name>',blog_view,name='category'),
+
+    path('author/<str:author_username>',blog_view,name='author'),
+
+    path('search/',blog_search,name='search'),
+
     path('test',test,name='test'),
     # path('<str:name>/<str:family_name>/<int:age>',test,name='test'),
     # path('post-<int:pid>',test,name='test'),
