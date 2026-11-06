@@ -34,8 +34,32 @@
   <p>{{post.content|snippet:50}}</p>
   {% endfor %} -->
 
+  <!-- 
   <p>test: </p>
-  {% popularposts %}
+  {% popularposts %} 
+  -->
+
+  <form action="{% url 'website:test' %}" method="post">
+    {% csrf_token %}
+    <!-- 
+    <label>name:</label>
+    <input name="name" type="text"><br> 
+    -->
+
+    {{form.as_p}}
+
+    <!-- 
+    <label>email:</label>
+    <input name="email" type="email"><br>
+    <label>subject:</label>
+    <input name="subject" type="text"><br>
+    <label>message:</label>
+    <input name="message" type="text"><br>
+    -->
+    <button type="submit">submit</button> 
+
+  </form>
+
 </body>
 
 </html>
