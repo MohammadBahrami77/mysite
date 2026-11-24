@@ -50,7 +50,8 @@ INSTALLED_APPS = [
 
     # 'website'
     'website.apps.WebsiteConfig',
-    'blog'
+    'blog',
+    'accounts',
 ]
 
 # sites framework
@@ -94,6 +95,9 @@ SUMMERNOTE_CONFIG = {
 MULTI_CAPTCHA_ADMIN = {
     'engine': 'simple-captcha',
 }
+
+# Login_Url to fix login_required:
+LOGIN_URL = 'accounts:login'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
